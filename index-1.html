@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101018">
+<title>Riouza Scripts — Roblox Script Hub</title>
+<style>
+:root{--bg:#0b0b12;--panel:#151522;--panel2:#1d1d2d;--text:#f5f5fb;--muted:#a6a6bd;--accent:#9b6cff;--accent2:#45dfb2;--line:#2a2940}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#302052 0,transparent 32%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+header{padding:18px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#0b0b12ed;backdrop-filter:blur(12px);z-index:5}
+.nav{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:900;letter-spacing:.5px;font-size:19px}.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:15px;font-size:14px}
+main{max-width:1050px;margin:auto;padding:28px 16px 60px}
+.hero{padding:34px 22px;border:1px solid #40305d;border-radius:22px;background:linear-gradient(130deg,#211632,#171725 62%,#102c2b);box-shadow:0 15px 45px #0005}
+.tag{display:inline-block;color:var(--accent2);background:#45dfb21a;border:1px solid #45dfb24a;border-radius:30px;padding:7px 11px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(32px,7vw,56px);line-height:1.03;margin:18px 0 12px}h1 span{color:#b99aff}
+.hero p{color:#c2c1d2;line-height:1.6;max-width:620px;margin:0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:12px;text-decoration:none;font-weight:bold;border:1px solid var(--line);color:var(--text);background:var(--panel2);cursor:pointer}
+.btn.primary{background:linear-gradient(100deg,#8d5cf6,#b16cff);border:0;color:white}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:32px 0 16px}
+h2{font-size:24px;margin:0}.sub{color:var(--muted);font-size:13px;margin-top:6px}
+.search{width:100%;max-width:280px;padding:12px 13px;border-radius:11px;border:1px solid var(--line);background:var(--panel);color:var(--text);outline:none}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;padding:17px;min-width:0}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.game{font-size:11px;color:var(--accent2);background:#45dfb214;padding:6px 8px;border-radius:20px}
+.status{font-size:11px;color:#c6aaff}.card h3{margin:15px 0 8px;font-size:18px}
+.card p{color:var(--muted);font-size:13px;line-height:1.5;min-height:39px;margin:0 0 15px}
+.card .btn{width:100%;font-size:13px}
+.note{margin-top:22px;padding:15px;border-radius:13px;background:#171725;border:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.55}
+.contact{margin-top:32px;padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(120deg,#171725,#211632);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.contact p{color:var(--muted);margin:7px 0 0;font-size:13px}
+footer{text-align:center;color:#77778e;font-size:12px;padding:25px 12px;border-top:1px solid var(--line)}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}nav a{margin-left:8px;font-size:12px}.section-head{align-items:stretch;flex-direction:column}.search{max-width:none}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.hero{padding:26px 18px}.contact{align-items:flex-start;flex-direction:column}.logo{font-size:16px}nav a{font-size:11px;margin-left:6px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">RIOUZA<span>SCRIPTS</span></div><nav><a href="#catalog">Каталог</a><a href="#contact">Telegram</a></nav></div></header>
+<main>
+<section class="hero">
+ <span class="tag">ROBLOX SCRIPT HUB</span>
+ <h1>ТВОЯ ИГРА.<br><span>ТВОИ ВОЗМОЖНОСТИ.</span></h1>
+ <p>Каталог скриптов и полезных материалов для Roblox в одном месте. Выбирай игру, смотри описание и переходи к материалу.</p>
+ <div class="actions"><a class="btn primary" href="#catalog">Открыть каталог ↓</a><a class="btn" href="#contact">Наш Telegram</a></div>
+</section>
+<div class="section-head" id="catalog"><div><h2>Каталог скриптов</h2><div class="sub">Добавляй свои игры и ссылки в этом разделе</div></div><input class="search" id="search" placeholder="Поиск по каталогу..."></div>
+<section class="grid" id="cards">
+ <article class="card"><div class="card-top"><span class="game">RIVALS</span><span class="status">Материал</span></div><h3>Rivals Script</h3><p>Описание скрипта. Укажи здесь возможности и совместимость.</p><a class="btn primary" href="#" onclick="alert('Добавь свою ссылку в href этой кнопки');return false">Открыть / скачать</a></article>
+ <article class="card"><div class="card-top"><span class="game">BLADE BALL</span><span class="status">Материал</span></div><h3>Blade Ball Script</h3><p>Краткое описание. Замени текст на информацию о своём материале.</p><a class="btn primary" href="#" onclick="alert('Добавь свою ссылку в href этой кнопки');return false">Открыть / скачать</a></article>
+ <article class="card"><div class="card-top"><span class="game">BLOX STRIKE</span><span class="status">Материал</span></div><h3>Blox Strike Script</h3><p>Краткое описание и примечания для посетителей сайта.</p><a class="btn primary" href="#" onclick="alert('Добавь свою ссылку в href этой кнопки');return false">Открыть / скачать</a></article>
+
+ <article class="card">
+  <div class="card-top"><span class="game">MURDER MYSTERY 2</span><span class="status">От RiouzaScripts</span></div>
+  <h3>MM2 — личный скрипт</h3>
+  <p>Подборка для Murder Mystery 2 от RiouzaScripts. Используй только если доверяешь источнику и понимаешь, что запускаешь.</p>
+  <pre id="mm2code" style="white-space:pre-wrap;overflow-wrap:anywhere;background:#0b0b12;border:1px solid var(--line);border-radius:10px;padding:11px;color:#cdb7ff;font-size:11px;line-height:1.5">loadstring(game:HttpGet("https://gist.githubusercontent.com/riouzascripts-hub/394234acf58793685e7dccf87f40ec63/raw/b3557e09559fcf730b317c60752959fba4adb47b/gistfile1.txt"))()</pre>
+  <button class="btn primary" type="button" onclick="copyMM2()">Скопировать скрипт</button>
+ </article>
+
+
+ <article class="card"><div class="card-top"><span class="game">ADOPT ME</span><span class="status">Ссылка автора</span></div><h3>Adopt Me — материалы</h3><p>Добавь проверенную ссылку и описание из своего канала.</p><a class="btn" href="https://t.me/RiouzaScripts" target="_blank" rel="noopener">Смотреть в Telegram ↗</a></article>
+ <article class="card"><div class="card-top"><span class="game">BROOKHAVEN</span><span class="status">Ссылка автора</span></div><h3>Brookhaven — материалы</h3><p>Публикация появится здесь после добавления ссылки на пост.</p><a class="btn" href="https://t.me/RiouzaScripts" target="_blank" rel="noopener">Смотреть в Telegram ↗</a></article>
+ <article class="card"><div class="card-top"><span class="game">BEDWARS</span><span class="status">Ссылка автора</span></div><h3>BedWars — материалы</h3><p>Добавь описание и безопасную ссылку на официальный материал.</p><a class="btn" href="https://t.me/RiouzaScripts" target="_blank" rel="noopener">Смотреть в Telegram ↗</a></article>
+ <article class="card"><div class="card-top"><span class="game">TOWER OF HELL</span><span class="status">Ссылка автора</span></div><h3>Tower of Hell — материалы</h3><p>Здесь будет карточка с твоим материалом и ссылкой на публикацию.</p><a class="btn" href="https://t.me/RiouzaScripts" target="_blank" rel="noopener">Смотреть в Telegram ↗</a></article>
+ <article class="card"><div class="card-top"><span class="game">BLADE BALL</span><span class="status">Ссылка автора</span></div><h3>Blade Ball — обновления</h3><p>Переходи в Telegram, чтобы посмотреть публикации канала.</p><a class="btn" href="https://t.me/RiouzaScripts" target="_blank" rel="noopener">Смотреть в Telegram ↗</a></article>
+ <article class="card"><div class="card-top"><span class="game">RIVALS</span><span class="status">Ссылка автора</span></div><h3>Rivals — обновления</h3><p>Ссылка ведёт в твой канал; добавь конкретный пост после проверки.</p><a class="btn" href="https://t.me/RiouzaScripts" target="_blank" rel="noopener">Смотреть в Telegram ↗</a></article>
+
+</section>
+<div class="note">Важно: размещай только материалы, которыми имеешь право делиться. Проверяй файлы и ссылки перед публикацией. Не вводи на сторонних страницах пароль от Roblox и не скачивай неизвестные APK.</div>
+<section class="contact" id="contact"><div><h2>Связь с нами</h2><p>Новости, обновления и поддержка — в Telegram.</p></div><div style="display:flex;gap:9px;flex-wrap:wrap"><a class="btn primary" href="https://t.me/RiouzaScripts" target="_blank" rel="noopener">Открыть @RiouzaScripts ↗</a><button class="btn" type="button" onclick="navigator.clipboard.writeText('@RiouzaScripts').then(()=>alert('@RiouzaScripts скопирован')).catch(()=>alert('Скопируй вручную: @RiouzaScripts'))">Скопировать @</button></div></section>
+</main>
+<footer>© 2026 RiouzaScripts · Неофициальный фанатский каталог, не связан с Roblox Corporation.</footer>
+<script>
+function copyMM2(){const code=document.getElementById('mm2code').innerText;navigator.clipboard.writeText(code).then(()=>alert('Скрипт скопирован')).catch(()=>alert('Не удалось скопировать. Выдели код вручную.'));}
+const search=document.getElementById('search');
+search.addEventListener('input',()=>{const q=search.value.toLowerCase();document.querySelectorAll('.card').forEach(card=>{card.style.display=card.innerText.toLowerCase().includes(q)?'':'none'})});
+</script>
+</body>
+</html>
